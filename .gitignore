@@ -1,3 +1,6 @@
+#added by john
+.DS_Store
+
 # Logs
 logs
 *.log
