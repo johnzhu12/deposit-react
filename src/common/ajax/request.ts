@@ -15,7 +15,7 @@ let ajaxInstance = axios.create({
 //请求mock数据
 function reqMockdata(options) {
     let responsePath = options.url;
-    // options.callback(require() //
+    options.callback(require('../../mockData' + responsePath + '.json'))//
 }
 let ajaxFunc = observable({
     ajax(ops) {

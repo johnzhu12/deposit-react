@@ -16,7 +16,7 @@ class HomePage extends React.Component<{}, {}>{
     requestTest() {
         let params = {}
         deposit.ajax({
-            url: '',
+            url: '/test1/getNames',
             data: params,
             callback(data) {
                 console.log('我是请求的数据')
