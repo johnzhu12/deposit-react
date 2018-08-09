@@ -4,6 +4,7 @@ import { observer } from 'mobx-react'
 import deposit from '@common/index'
 import { Button } from 'antd'
 import Header from '@components/header/header'
+import Menu from '@components/menu/menu'
 import Footer from '@components/footer/footer'
 
 @observer
@@ -26,6 +27,7 @@ class HomePage extends React.Component<{}, {}>{
         return (
             <div>
                 <Header />
+                <Menu />
                 <Button type='primary' onClick={this.requestTest.bind(this)}>
                     测试接口
                 </Button>
