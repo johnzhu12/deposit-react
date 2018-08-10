@@ -1,6 +1,7 @@
 //added by john 8-6
 import styled from 'styled-components'
-// let imgurl = require('../../static/imgs/logo1.jpeg')
+let logourl = require('../../static/imgs/logo1.jpg')
+let imgurl = require('../../static/imgs/logo.jpeg')
 
 const HeaderTag = styled.div`
 .headFrame{
@@ -13,18 +14,21 @@ const HeaderTag = styled.div`
         margin: 0 120px;
         /* background: blue; */
         .logo{
-            background: blue;
-            width: 130px;
+            background: url(${logourl}) no-repeat;
+            background-size: contain;
             height: 100%;
+            width: 215px;
+           
             display: inline-block;
         }
         .divide{
             width: 1px;
             height: 50px;
-            margin-top: 15px;
+            
             display: inline-block;
             background: white;
             vertical-align: top;
+            margin:15px 20px;
         }
         .title{
             display: inline-block;
@@ -33,7 +37,7 @@ const HeaderTag = styled.div`
             /* background: pink; */
             vertical-align: top;
             height: 100%;
-            padding: 20px 0;
+            padding: 16px 0;
             .ch{
                 font-weight:bold;
                 font-size:20px;
@@ -44,10 +48,12 @@ const HeaderTag = styled.div`
         }
         .cornerimg{
             float: right;
-            width: 100px;
             height: 100%;
+            width: 280px;
+    
             display: inline-block;
-            background: blue;
+            background: url(${imgurl}) no-repeat;
+            background-size: contain;
         }
     }
 }
