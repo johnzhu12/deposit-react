@@ -14,6 +14,12 @@ class Menu extends React.Component<{}, {}>{
             case 2:
                 location.hash = '/info';
                 break;
+            case 3:
+                location.hash = '/manger';
+                break;
+            case 4:
+                location.hash = '/voter';
+                break;
         }
 
     }
@@ -27,7 +33,8 @@ class Menu extends React.Component<{}, {}>{
                             <li><a onClick={this.clickLink.bind(this, 0)}>主页</a></li>
                             <li><a onClick={this.clickLink.bind(this, 1)}>服务介绍</a></li>
                             <li><a onClick={this.clickLink.bind(this, 2)}>信息披露</a></li>
-                            <li><a onClick={this.clickLink.bind(this, 3)}>其他</a></li>
+                            <li><a onClick={this.clickLink.bind(this, 3)}>管理人服务平台</a></li>
+                            <li><a onClick={this.clickLink.bind(this, 4)}>投资者服务平台</a></li>
                         </ul>
                     </div>
                 </div>
