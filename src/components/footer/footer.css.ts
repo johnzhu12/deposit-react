@@ -7,7 +7,7 @@ const FooterTag = styled.div`
     background-color:pink;
     .footerContent{
         /*background-color:green;*/
-        margin:0 120px;
+        padding: 0 120px;
         /* min-width: 1000px;*/
         width:100%;
         height: 100%;
@@ -45,7 +45,7 @@ const FooterTag = styled.div`
     .qrCode{
         width:25%;
         float:right;
-        
+        text-align: right;
         .pp{
             display:inline-block;
             font-size:24px;
