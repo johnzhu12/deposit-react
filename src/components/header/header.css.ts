@@ -12,7 +12,7 @@ const HeaderTag = styled.div`
     .content{
         height: 100%;
         margin: 0 120px;
-        /* background: blue; */
+        min-width: 1000px;
         .logo{
             background: url(${logourl}) no-repeat;
             background-size: contain;
