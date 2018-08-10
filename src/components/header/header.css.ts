@@ -1,6 +1,6 @@
 //added by john 8-6
 import styled from 'styled-components'
-let logourl = require('../../static/imgs/logo1.jpg')
+let logourl = require('../../static/imgs/logo1.png')
 let imgurl = require('../../static/imgs/logo.jpeg')
 
 const HeaderTag = styled.div`
@@ -16,9 +16,10 @@ const HeaderTag = styled.div`
         .logo{
             background: url(${logourl}) no-repeat;
             background-size: contain;
-            height: 100%;
-            width: 215px;
-           
+            height: 70%;
+            margin-top: 12px;
+            /* border: 1px solid red; */
+            width: 200px;
             display: inline-block;
         }
         .divide{
