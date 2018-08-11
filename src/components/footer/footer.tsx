@@ -50,6 +50,16 @@ class Footer extends React.Component<{}, {}>{
                 <p><img src=""/></p>
                 </div>
                 </div>
+                <div className="footerBottom">
+                    <p>Copyright 2008-2018 Huatai Securities All Rights Reserved 华泰证券股份有限公司版权所有</p>
+                    <p>公司总部：江苏省南京市江东中路228号 邮编：210019  公司级总机：025-83389999  投诉电话：4008895597  传真：025-83387337   邮箱：95597@htsc.com</p>
+                    <p>
+                        <a>信息系统安全性设计审定</a>
+                        <a>证监会核准网上证券委托业务资格</a>
+                        <a>许可证编号：苏B2-20140508</a>
+                        <a>备案许可证编号：苏ICP证030125-1</a>
+                    </p>
+                </div>
             </div>
             </FooterTag>
         )
