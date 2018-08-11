@@ -3,14 +3,14 @@ import styled from 'styled-components'
 const FooterTag = styled.div`
 .footerFrame{
     width:100%;
-    height:400px;
+    height:500px;
     background-color:pink;
     .footerContent{
         /*background-color:green;*/
         padding: 0 120px;
         /* min-width: 1000px;*/
         width:100%;
-        height: 100%;
+        height: 80%;
       float:left;
     font-size:0;
     .right{
@@ -61,13 +61,31 @@ const FooterTag = styled.div`
             display:inline-block;
         }
         .ppName{
-            
-            font-size:24px;
+            font-size:16px;
             font-family:'microsoft yahei';
             color:rgb(138,141,150);
         }
 
     }
+}
+.footerBottom{
+    float:left;
+    width:100%;
+    height: 20%;
+    
+    padding:0px 120px;
+    /*border-top:2px solid rgb(234,234,234);*/
+    font-family:'microsoft yahei';
+a{
+   padding-right:20px;
+   color:rgb(137,137,137);
+}
+a:hover{
+   color: rgb(63,140,254);
+}
+p:first-child{
+    padding-top:40px;
+    border-top:1px solid rgb(234,234,234);
 }
 }
 `

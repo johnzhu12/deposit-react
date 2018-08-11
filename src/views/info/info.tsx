@@ -2,6 +2,7 @@ import * as React from 'react'
 import Header from '@components/header/header'
 import Menu from '@components/menu/menu'
 import Footer from '@components/footer/footer'
+import InfoBody from '@components/body/infoContent'
 
 
 class InfoPage extends React.Component<{}, {}>{
@@ -10,7 +11,7 @@ class InfoPage extends React.Component<{}, {}>{
             <div>
                 <Header />
                 <Menu />
-                信息披露
+                <InfoBody />
                 <Footer />
             </div>
         )
