@@ -31,7 +31,7 @@ class InfoBody extends React.Component<{}, InfoStates>{
     }
     componentWillMount() {
         this.getDataList()
-        //test123
+        //test56 git pull upstream master 从远端更新最新代码
     }
     //获取table数据
     getDataList() {
