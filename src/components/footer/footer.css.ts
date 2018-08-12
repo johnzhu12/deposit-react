@@ -4,11 +4,12 @@ const FooterTag = styled.div`
 .footerFrame{
     width:100%;
     height:500px;
-    background-color:pink;
+    /* background-color:pink; */
+    min-width: 1200px;
     .footerContent{
         /*background-color:green;*/
         padding: 0 120px;
-        /* min-width: 1000px;*/
+        
         width:100%;
         height: 80%;
       float:left;

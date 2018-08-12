@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const MenuTag = styled.div`
 .menuFrame{
     /* ul li以横排显示 */
+    min-width: 1200px;
     height:45px;
     width:100%;
     background-color:rgb(177,32,33);

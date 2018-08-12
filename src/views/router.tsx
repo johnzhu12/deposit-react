@@ -5,6 +5,8 @@ import ServicePage from './service/service'
 import InfoPage from './info/info'
 import MangerPage from './manger/manger'
 import VoterPage from './voter/voter'
+import infoDetailPage from './info/infodetail'
+
 
 class Router extends React.Component<{}, {}>{
     render() {
@@ -16,6 +18,7 @@ class Router extends React.Component<{}, {}>{
                 <Route path='/home' component={HomePage} />
                 <Route path='/manger' component={MangerPage} />
                 <Route path='/voter' component={VoterPage} />
+                <Route path='/infoDetail' component={infoDetailPage} />
                 <Redirect to="/home" />
             </Switch>
         )

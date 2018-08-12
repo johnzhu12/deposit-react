@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const BodyTag = styled.div`
 .bodyContent{
         width:100%;
-        height:780px;
+        height: auto;
         background-color:rgb(236,241,244);
         display:inline-block;
         padding:20px 120px 40px;

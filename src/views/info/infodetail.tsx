@@ -2,20 +2,20 @@ import * as React from 'react'
 import Header from '@components/header/header'
 import Menu from '@components/menu/menu'
 import Footer from '@components/footer/footer'
-import WrappedInfoBodyForm from '@components/body/infoContent'
+import InfoDetail from '@components/body/infoDetail'
 
 
-class InfoPage extends React.Component<{}, {}>{
+class InfoDetailPage extends React.Component<{}, {}>{
     render() {
         return (
             <div>
                 <Header />
                 <Menu />
-                <WrappedInfoBodyForm />
+                <InfoDetail />
                 <Footer />
             </div>
         )
     }
 }
 
-export default InfoPage
+export default InfoDetailPage

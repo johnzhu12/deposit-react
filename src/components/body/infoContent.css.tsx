@@ -18,9 +18,10 @@ const InfoBodyTag = styled.div`
     }
     .infoSearch{
         /*通过antd-design拉取控件*/
+        padding:20px 0;
         width:100%;
         height:100px;
-        background-color:blue;
+        /* background-color:blue; */
     }
     .infoWaring{
         display:inline-block;
@@ -36,8 +37,8 @@ const InfoBodyTag = styled.div`
         }
     }
     .infoTitle{
-        background-color:rgb(241,241,241);
-        padding:15px 20px;
+        border-bottom: 1px solid rgb(241,241,241);
+        padding: 15px 20px;
         .infoTitleName{
             width:50%;
             display:inline-block;
@@ -68,6 +69,9 @@ const InfoBodyTag = styled.div`
         width:50%;
         /*float:right; 分页器 float下边缘问题*/
         background-color:blue;
+    }
+    .buttonCustom{
+        
     }
 }
 }
