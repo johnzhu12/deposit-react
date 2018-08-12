@@ -2,6 +2,7 @@ import * as React from 'react'
 import Header from '@components/header/header'
 import Menu from '@components/menu/menu'
 import Footer from '@components/footer/footer'
+import ServiceBody from '@components/body/serviceContent'
 
 
 class ServicePage extends React.Component<{}, {}>{
@@ -10,7 +11,7 @@ class ServicePage extends React.Component<{}, {}>{
             <div>
                 <Header />
                 <Menu />
-                服务介绍
+                <ServiceBody />
                 <Footer />
             </div>
         )

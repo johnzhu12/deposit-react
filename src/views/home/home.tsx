@@ -6,7 +6,7 @@ import { Button } from 'antd'
 import Header from '@components/header/header'
 import Menu from '@components/menu/menu'
 import Footer from '@components/footer/footer'
-
+import HomeContent from '@components/body/homeContent'
 interface HomeProps {
 
 }
@@ -35,15 +35,16 @@ class HomePage extends React.Component<HomeProps, HomeStates>{
             }
         })
     }
+    /*<Button type='primary' onClick={this.requestTest.bind(this)}>
+                    测试接口
+                    {this.state.name}
+                </Button> */
     render() {
         return (
             <div>
                 <Header />
                 <Menu />
-                <Button type='primary' onClick={this.requestTest.bind(this)}>
-                    测试接口
-                    {this.state.name}
-                </Button>
+                <HomeContent />
                 <Footer />
             </div>
         )
