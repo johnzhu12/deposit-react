@@ -31,7 +31,7 @@ class InfoBody extends React.Component<{}, InfoStates>{
     }
     componentWillMount() {
         this.getDataList()
-        //test
+        //test56
     }
     //获取table数据
     getDataList() {
