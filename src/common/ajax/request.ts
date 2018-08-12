@@ -15,7 +15,7 @@ let ajaxInstance = axios.create({
 //请求mock数据
 function reqMockdata(options) {
     let responsePath = options.url;
-    options.callback(require('../../mockData' + responsePath + '.json'))//
+    options.callback(require('../../mockData' + responsePath + '.json').data)
 }
 let ajaxFunc = observable({
     ajax(ops) {
@@ -35,9 +35,9 @@ let ajaxFunc = observable({
                 url: `${host}${config.url}`
             }).then(response => {
                 console.log('我是请求结果', response);
-                // if(response.code == '200'){
-                //     config.callback(response.data)
-                // }
+                if (response['code'] == '200') {
+                    config.callback(response.data)
+                }
             })
         }
     }
