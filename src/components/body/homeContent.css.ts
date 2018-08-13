@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const BodyTag = styled.div`
 .bodyContent{
         width:100%;
-        height:780px;
+        height: auto;
         background-color:rgb(236,241,244);
         display:inline-block;
         padding:20px 120px 40px;
@@ -56,7 +56,7 @@ const BodyTag = styled.div`
 
     }
     .bodyContentBottom{
-        margin:20px 0 40px 0;
+        margin-top:20px;
         padding:35px 30px 15px 20px;
         background-color:white;
         width:100%;
@@ -65,11 +65,21 @@ const BodyTag = styled.div`
             font-size:14px;
             font-weight:bold;
             margin-bottom:10px;
+            padding-left:20px;
         }
         .bottomTitleRight{
-            float:right;
+            float:right; 
+            /* text-align:right; */
             display:inline-block;
             margin-bottom:10px;
+            padding-right:15px;
+            a{
+                text-decoration:underline;
+                color:rgb(81,79,90);
+            }
+            a:hover{
+                color:rgb(89,154,229);
+            }
         }
         .bottomList{
             border-top:1px solid rgb(234,234,234);

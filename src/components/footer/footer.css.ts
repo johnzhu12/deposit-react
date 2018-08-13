@@ -3,16 +3,17 @@ import styled from 'styled-components'
 const FooterTag = styled.div`
 .footerFrame{
     width:100%;
-    height:500px;
-    background-color:pink;
+    height:auto;
+    padding: 0 120px;
+    /* background-color:pink; */
+    min-width: 1200px;
     .footerContent{
         /*background-color:green;*/
-        padding: 0 120px;
-        /* min-width: 1000px;*/
+        padding-bottom:30px;
         width:100%;
         height: 80%;
-      float:left;
-    font-size:0;
+        float:left;
+        font-size:0;
     .right{
         text-align:center;
         width:25%;
@@ -40,30 +41,36 @@ const FooterTag = styled.div`
         margin-top:55px;
         padding-bottom:30px;
         font-weight:bold;
-        font-size:24px;
+        font-size:20px;
     }
     .qrCode{
         width:25%;
         float:right;
         text-align: right;
-        .pp{
-            display:inline-block;
-            font-size:24px;
-            margin-top:50px;
-            color:rgb(237,126,30);
-            display:inline-block;
-            padding-right:15px;
-        }
         .ppNumber{
-            font-family:Palatino Linotype;
-            font-size:34px;
-            color:rgb(237,126,30);
+            margin-top:60px;
             display:inline-block;
+            vertical-align:middle;
+            span{
+                height:100%;
+                padding-right:20px;
+                font-size:24px;
+                color:rgb(237,126,30);
+                vertical-align:middle;
+            }
+            img{
+                vertical-align:middle;
+            }
         }
         .ppName{
-            font-size:16px;
+            display:block;
+            padding-top:10px;
+            font-size:19px;
             font-family:'microsoft yahei';
             color:rgb(138,141,150);
+        }
+        .qrCodeImg{
+            padding-top:20px;
         }
 
     }
@@ -73,7 +80,7 @@ const FooterTag = styled.div`
     width:100%;
     height: 20%;
     
-    padding:0px 120px;
+    padding-bottom:10px;
     /*border-top:2px solid rgb(234,234,234);*/
     font-family:'microsoft yahei';
 a{
@@ -84,7 +91,7 @@ a:hover{
    color: rgb(63,140,254);
 }
 p:first-child{
-    padding-top:40px;
+    padding-top:30px;
     border-top:1px solid rgb(234,234,234);
 }
 }

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const MenuTag = styled.div`
 .menuFrame{
     /* ul li以横排显示 */
+    min-width: 1200px;
     height:45px;
     width:100%;
     background-color:rgb(177,32,33);
@@ -24,7 +25,7 @@ div.menu ul li
     
 }
 /* 所有class为menu的div中的ul中的a样式(包括尚未点击的和点击过的样式) */
-div.menu ul li a, div.menu ul li a:visited
+div.menu ul li a
 {
     /* background-color: #465c71;  背景色 */
     /* border: 1px #4e667d solid;  边框 */
@@ -38,19 +39,20 @@ div.menu ul li a, div.menu ul li a:visited
     white-space: nowrap; /* 对于文本内的空白处，不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。 */
 }
 /* 所有class为menu的div中的ul中的a样式(鼠标移动到元素中的样式) */
-div.menu ul li a:hover
+div.menu ul li a:hover,div.menu ul li a:active
 {
     background-color: rgb(138,24,25);  /* 背景色 */
     /* color: #465c71;  文字颜色 */
     text-decoration: none; /* 不显示超链接下划线 */
 }
+.active {background-color: red;}
 /* 所有class为menu的div中的ul中的a样式(鼠标点击元素时的样式) */
-/*div.menu ul li a:active*/
-/*{
-        background-color: #465c71;  背景色 */
-    /*  color: #cfdbe6;  文字颜色 */
-    /*  text-decoration: none;  不显示超链接下划线 
-}*/
+/* div.menu ul li a:active
+{
+    background-color: rgb(138,24,25);  /*背景色  */
+    /*  color: #cfdbe6;  文字颜色 
+    text-decoration: none;  不显示超链接下划线 
+} */
 }
 `
 
