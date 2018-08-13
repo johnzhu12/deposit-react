@@ -4,7 +4,7 @@ const DetailTag = styled.div`
 .detailNoticeFrame{
     width:100%;
     background-color:rgb(241,241,241);
-    padding:20px 120px 40px;
+    padding:20px 20% 40px;
     font-size:16px;
     .detailNoticeContent{
         padding:0 200px;

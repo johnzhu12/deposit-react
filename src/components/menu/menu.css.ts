@@ -12,7 +12,7 @@ const MenuTag = styled.div`
 div.menu ul
 {
     list-style:none; /* 去掉ul前面的符号 */
-    margin-left: 120px; /* 与外界元素的距离为0 */
+    margin:0 20%; /* 与外界元素的距离为0 */
     padding: 0px; /* 与内部元素的距离为0 */
     /* width: auto;   宽度根据元素内容调整 */
 }

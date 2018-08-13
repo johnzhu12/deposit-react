@@ -6,7 +6,7 @@ const InfoBodyTag = styled.div`
 .infoFrame{
     width:100%;
     background-color:rgb(234,234,234);
-    padding:20px 120px 40px;
+    padding:20px 20% 40px;
     .infoContent{
         background-color:white;
         padding:30px 30px 15px 30px;

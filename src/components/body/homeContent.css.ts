@@ -6,7 +6,7 @@ const BodyTag = styled.div`
         height: auto;
         background-color:rgb(236,241,244);
         display:inline-block;
-        padding:20px 120px 40px;
+        padding:20px 20% 40px;
     .bodyContentTop{
         padding:35px 30px 15px 20px;
         background-color:white;

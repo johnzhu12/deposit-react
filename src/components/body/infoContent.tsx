@@ -125,13 +125,13 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
                                     <Col span={6}>
                                         <FormItem
                                             label="产品类型"
-                                            labelCol={{ span: 10 }}
-                                            wrapperCol={{ span: 14 }}
+                                            labelCol={{ span: 11 }}
+                                            wrapperCol={{ span: 13 }}
                                         >
                                             {getFieldDecorator('prodType', {
                                                 rules: [],
                                             })(
-                                                <Select style={{ width: 120 }} placeholder="请选择(默认全部)">
+                                                <Select style={{ width: 150 }} placeholder="请选择(默认全部)">
                                                     <Option value="1">全部</Option>
                                                     <Option value="2">私募基金</Option>
                                                     <Option value="3">公募基金</Option>
