@@ -34,6 +34,11 @@ class Menu extends React.Component<{}, {}>{
                 location.hash = '/voter';
                 break;
         }
+        //写html代码给第几个li赋值background-color: rgb(138,24,25);
+        // {{ul: child[index + 1]{
+        //     background-color: rgb(138, 24, 25);}}
+        // }
+
     }
     render() {
 

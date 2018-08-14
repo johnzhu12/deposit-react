@@ -53,13 +53,16 @@ const InfoBodyTag = styled.div`
             border-bottom:none;
             :first-child{
                 padding-left:30px;
+                :hover{
+                    color:rgb(89,154,299);
+                }
             }
         }
         .ant-table-thead > tr > th{
             font-weight:bold; 
             /* 公告标题显示位置调整 */
             :first-child{
-            padding-left:200px;
+            padding-left:120px;
             }
         }    
     }

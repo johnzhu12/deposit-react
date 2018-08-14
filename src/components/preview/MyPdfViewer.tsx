@@ -9,10 +9,6 @@ interface MyPdfViewerStates {
   pages: any
 }
 
-// var urlId = NoticeStore.getNotice()['id'];
-// console.log(urlId)
-// const pdfAddress = './pdfs/' + urlId + '.pdf';
-// const pdfdir = require(pdfAddress);
 const pdfdir = require('./pdfs/1.pdf');
 
 class MyPdfViewer extends React.Component<{}, MyPdfViewerStates> {

@@ -4,5 +4,4 @@ let deposit = {
     ajax
 }
 
-
 export default deposit;

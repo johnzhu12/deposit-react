@@ -12,7 +12,6 @@ class Router extends React.Component<{}, {}>{
     render() {
         return (
             <Switch>
-
                 <Route path='/service' component={ServicePage} />
                 <Route path='/info' component={InfoPage} />
                 <Route path='/home' component={HomePage} />

@@ -21,6 +21,7 @@ const BodyTag = styled.div`
             font-size:14px;
             text-indent:2em;
             padding-top:10px;
+            display: block;
         }
         .topContentOneP1{
             font-size:14px;
@@ -32,11 +33,11 @@ const BodyTag = styled.div`
             padding-bottom:15px;
         }
         .topContentTwo{
-            /*display:none;   JQUERY实现???*/
             .topContentTwoTitle{
                 font-size:14px;
                 text-indent:2em;
                 padding-top:10px;
+                display: block;
             }
             .topContentTwoP1{
                 font-size:14px;
@@ -81,36 +82,22 @@ const BodyTag = styled.div`
                 color:rgb(89,154,229);
             }
         }
-        .bottomList{
-            border-top:1px solid rgb(234,234,234);
-            background-color:rgb(241,241,241);
-            .bottomListTitle{
-                display:inline-block;
-                padding:12px 0 10px 30px;
-            }
-            .bottomListTime{
-                padding:12px 40px 10px 0;
-                float:right;
-                display:inline-block;
-            }
-        }
         .bottomListContent{
-            padding:18px 30px 50px 20px;
-            
-            li{
-                margin-bottom:15px;
-                a{
-                    color:rgb(95,95,95);
+            .ant-table-thead > tr > th{
+                font-weight:bold;
+                :first-child{
+                    padding-left:120px;
                 }
-                p{
-                    display:inline-block;
-                    float:right;
-                }
-                a:hover{
+            }
+            .ant-table-tbody > tr > td{
+                border:none;
+                span:hover{
                     color:rgb(89,154,299);
                 }
+                :first-child{
+                    padding-left:50px;
+                }
             }
-
         }
     }
 }
