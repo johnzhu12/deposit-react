@@ -1,4 +1,3 @@
-//added by john 8-6
 import styled, { injectGlobal } from 'styled-components'
 
 const layout = styled.div`
@@ -6,11 +5,11 @@ const layout = styled.div`
 `
 //全局样式
 injectGlobal`
-.ant-table-thead{
-    th{
-        text-align:center !important;
-    }
+/*设置页面水平方向隐藏滑动进度条*/
+html { 
+    overflow-x: hidden; 
 }
 `
+
 
 export default layout;

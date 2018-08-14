@@ -1,10 +1,20 @@
 import React from 'react';
 import PDF from 'react-pdf-js';
+// import { observer } from 'mobx-react'
+import NoticeStore from '@models/notice'
+
+// observer
 interface MyPdfViewerStates {
   page: any,
   pages: any
 }
-const pdfdir = require('./pdfs/test.pdf')
+
+// var urlId = NoticeStore.getNotice()['id'];
+// console.log(urlId)
+// const pdfAddress = './pdfs/' + urlId + '.pdf';
+// const pdfdir = require(pdfAddress);
+const pdfdir = require('./pdfs/1.pdf');
+
 class MyPdfViewer extends React.Component<{}, MyPdfViewerStates> {
   constructor(props) {
     super(props)

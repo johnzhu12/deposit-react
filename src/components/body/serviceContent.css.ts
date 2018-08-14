@@ -7,7 +7,7 @@ const ServiceBodyTag = styled.div`
 .serviceBodyFrame{
     width:100%;
     background-color:rgb(234,234,234);
-    padding:20px 120px 40px;
+    padding:20px 15% 40px;
     
     .serviceBody{
         padding:30px 20px 20px 20px;

@@ -3,7 +3,20 @@ import MenuTag from './menu.css'
 
 
 class Menu extends React.Component<{}, {}>{
-    clickLink(index) {
+    clickLink(this, index) {
+        // var clickMenu = document.getElementById('menu1');
+        // var clickA = clickMenu.getElementsByTagName('a');
+        // for (var i = 0; i < clickA.length; i++) {
+        //     clickA[i].onclick = function () {
+        //         for (var i = 0; i < clickA.length; i++) {
+        //             clickA[i].className = "";
+        //         }
+        //         this.className = "active";
+        //     }
+        // }
+        // console.log(this.index);
+        // this.className = "active";
+        // console.log(this.className);
         switch (index) {
             case 0:
                 location.hash = '/home';
@@ -21,7 +34,6 @@ class Menu extends React.Component<{}, {}>{
                 location.hash = '/voter';
                 break;
         }
-
     }
     render() {
 
@@ -38,7 +50,6 @@ class Menu extends React.Component<{}, {}>{
                         </ul>
                     </div>
                 </div>
-
             </MenuTag>
 
         )

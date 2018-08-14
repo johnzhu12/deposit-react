@@ -10,7 +10,7 @@ class Body extends React.Component<{}, {}>{
             <BodyTag>
                 <div className="bodyContent">
                     <div className="bodyContentTop">
-                        <p className="topTitle">华泰证券资产托管业务</p>
+                        <h2 className="topTitle">华泰证券资产托管业务</h2>
                         <p className="topContentOneTitle">1、基金托管业务</p>
                         <p className="topContentOneP1">华泰证券已取得证券投资基金托管资格，可以为公募基金和私募基金提供托管服务，其中所指私募基金包括各类私募基金管理机构发行的私募基金产品、证券公司、基金管理公司、期货公司及其子公司发行的资产管理计划等。</p>
                         <p className="topContentOneP2">华泰证券托管服务，是指由华泰证券担任基金托管人按照法律法规的规定及基金合同的约定，对基金履行安全保管基金财产、办理清算交割、复核审查资产净值、开展投资监督、召集基金份额持有人大会等职责的行为。基金托管主要服务内容包括：资产保管、清算交收、估值核算、投资监督、信息披露。</p>
@@ -22,11 +22,11 @@ class Body extends React.Component<{}, {}>{
                         {/* <p className="topContentOpen"><a>收起</a></p> */}
                     </div>
                     <div className="bodyContentBottom">
-                        <p className="bottomTitle">信息披露</p>
-                        <p className="bottomTitleRight"><a onClick={this.getMore.bind(this)}>更多</a></p>
+                        <h2 className="bottomTitle">信息披露</h2>
+                        <span className="bottomTitleRight"><a onClick={this.getMore.bind(this)}>更多</a></span>
                         <div className="bottomList">
-                            <p className="bottomListTitle">信息披露标题</p>
-                            <p className="bottomListTime">发布时间</p>
+                            <span className="bottomListTitle">信息披露标题</span>
+                            <span className="bottomListTime">发布时间</span>
                         </div>
                         <div className="bottomListContent">
                             <ul>

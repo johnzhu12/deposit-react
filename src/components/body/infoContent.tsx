@@ -3,7 +3,7 @@ import InfoBodyTag from './infoContent.css'
 import { Table, Form, Input, Col, Row, Select, Button } from 'antd';
 import deposit from '@common/index'
 import NoticeStore from '@models/notice'
-const imgurl = require('../../static/imgs/icon.jpg')
+const imgurl = require('../../static/imgs/icon.png')
 const FormItem = Form.Item;
 const Option = Select.Option;
 
@@ -21,11 +21,11 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
 
         this.state = {
             columns: [{
-                title: '公共标题',
+                title: '公告标题',
                 dataIndex: 'title',
                 key: 'title',
                 render: (text, data, index) => {
-                    // console.log(`我是第${index + 1}行的数据`, JSON.stringify(data))
+                    //console.log(`我是第${index + 1}行的数据`, JSON.stringify(data))
                     return <span style={{ cursor: 'pointer' }} onClick={this.showDetail.bind(this, data)}>{text}</span>
                 }
             }, {
@@ -45,6 +45,7 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
         this.getDataList()
     }
     showDetail(data) {
+        //console.log(data);
         location.hash = "/infoDetail"
         NoticeStore.setNotice(data)
     }
@@ -83,61 +84,61 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
                         <div className="infoSearch">
                             <Form layout="inline">
                                 <Row>
-                                    <Col span={4}>
+                                    <Col span={5}>
                                         <FormItem
                                             label="产品代码"
-                                            labelCol={{ span: 12 }}
-                                            wrapperCol={{ span: 12 }}
+                                            labelCol={{ span: 10 }}
+                                            wrapperCol={{ span: 14 }}
                                         >
                                             {getFieldDecorator('prodCode', {
                                                 rules: [],
                                             })(
                                                 <Input placeholder="请输入" />
-                                                )}
+                                            )}
                                         </FormItem>
                                     </Col>
-                                    <Col span={4}>
+                                    <Col span={5}>
                                         <FormItem
                                             label="产品名称"
-                                            labelCol={{ span: 12 }}
-                                            wrapperCol={{ span: 12 }}
+                                            labelCol={{ span: 10 }}
+                                            wrapperCol={{ span: 14 }}
                                         >
                                             {getFieldDecorator('prodName', {
                                                 rules: [],
                                             })(
                                                 <Input placeholder="请输入" />
-                                                )}
+                                            )}
                                         </FormItem>
                                     </Col>
-                                    <Col span={4}>
+                                    <Col span={5}>
                                         <FormItem
                                             label="文章标题"
-                                            labelCol={{ span: 12 }}
-                                            wrapperCol={{ span: 12 }}
+                                            labelCol={{ span: 10 }}
+                                            wrapperCol={{ span: 14 }}
                                         >
                                             {getFieldDecorator('articleTitle', {
                                                 rules: [],
                                             })(
                                                 <Input placeholder="请输入" />
-                                                )}
+                                            )}
                                         </FormItem>
                                     </Col>
-                                    <Col span={9}>
+                                    <Col span={6}>
                                         <FormItem
                                             label="产品类型"
-                                            labelCol={{ span: 12 }}
-                                            wrapperCol={{ span: 12 }}
+                                            labelCol={{ span: 10 }}
+                                            wrapperCol={{ span: 14 }}
                                         >
                                             {getFieldDecorator('prodType', {
                                                 rules: [],
                                             })(
-                                                <Select style={{ width: 120 }} placeholder="请选择(默认全部)">
+                                                <Select style={{ width: 130 }} placeholder="请选择(默认全部)">
                                                     <Option value="1">全部</Option>
                                                     <Option value="2">私募基金</Option>
-                                                    <Option value="3" >公募基金</Option>
+                                                    <Option value="3">公募基金</Option>
                                                     <Option value="4">其他</Option>
                                                 </Select>
-                                                )}
+                                            )}
                                         </FormItem>
                                     </Col>
                                     <Col span={3}>
@@ -159,7 +160,6 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
                                 rowKey="id"
                                 pagination={this.state.pagination}
                             />
-
                         </div>
                     </div>
                 </div>
