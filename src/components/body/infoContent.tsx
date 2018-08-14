@@ -58,7 +58,7 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
             url: '/info/noticeData',
             data: params,
             callback(data) {
-                // console.log('我是请求的数据', data)
+                console.log('我是请求的数据', data)
                 that.setState({ dataSource: data })
             }
         })

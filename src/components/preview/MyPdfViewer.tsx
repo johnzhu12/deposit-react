@@ -9,11 +9,8 @@ interface MyPdfViewerStates {
   pages: any
 }
 
-// var urlId = NoticeStore.getNotice()['id'];
-// console.log(urlId)
-// const pdfAddress = './pdfs/' + urlId + '.pdf';
-// const pdfdir = require(pdfAddress);
-const pdfdir = require('./pdfs/1.pdf');
+
+
 
 class MyPdfViewer extends React.Component<{}, MyPdfViewerStates> {
   constructor(props) {
@@ -23,6 +20,7 @@ class MyPdfViewer extends React.Component<{}, MyPdfViewerStates> {
     //   pages: ''
     // }
   }
+  pdfdir: any;
   // onDocumentComplete = (pages) => {
   //   this.setState({ page: 1, pages });
   // }
@@ -34,6 +32,20 @@ class MyPdfViewer extends React.Component<{}, MyPdfViewerStates> {
   // handleNext = () => {
   //   this.setState({ page: this.state.page + 1 });
   // }
+
+  componentWillMount() {
+    var notice = NoticeStore.getNotice();
+    console.log('我是notice对象数据', notice)
+    var urlId = notice['id'];
+    if (urlId) {
+      console.log(urlId)
+      // const pdfAddress = 'pdfs/' + urlId + '.pdf';
+      this.pdfdir = require(`./pdfs/${urlId}.pdf`);
+    } else {
+      this.pdfdir = require('./pdfs/1.pdf');
+    }
+
+  }
 
   renderPagination = (page, pages) => {
     // let previousButton = <li className="previous" onClick={this.handlePrevious}><a href="#"><i className="fa fa-arrow-left"></i> Previous</a></li>;
@@ -62,7 +74,7 @@ class MyPdfViewer extends React.Component<{}, MyPdfViewerStates> {
     return (
       <div>
         <PDF
-          file={pdfdir}
+          file={this.pdfdir}
         // onDocumentComplete={this.onDocumentComplete}
         // page={this.state.page}
         />
