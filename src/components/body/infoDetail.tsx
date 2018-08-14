@@ -16,7 +16,8 @@ class InfoDetail extends React.Component<{}, {}>{
             <DetailTag>
                 <div className="detailNoticeFrame">
                     <div className="detailNoticeContent">
-                        <h1>这是标题{NoticeStore.getNotice()['title']}</h1>
+                        <h1>{NoticeStore.getNotice()['title']}</h1>
+                        <span>{NoticeStore.getNotice()['publishTime']}</span>
                         <MypdfPreView />
                         <div className="detailNoticeDownNew"><span>附件:</span><a>{NoticeStore.getNotice()['title']}</a>
                         </div>

@@ -2,7 +2,6 @@ import { observable, action } from 'mobx'
 
 /**
  * 全局loading
- * added by john 8-9
  */
 
 class ObservableMaskStore {

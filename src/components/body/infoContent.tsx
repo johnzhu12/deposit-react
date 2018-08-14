@@ -25,7 +25,7 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
                 dataIndex: 'title',
                 key: 'title',
                 render: (text, data, index) => {
-                    // console.log(`我是第${index + 1}行的数据`, JSON.stringify(data))
+                    //console.log(`我是第${index + 1}行的数据`, JSON.stringify(data))
                     return <span style={{ cursor: 'pointer' }} onClick={this.showDetail.bind(this, data)}>{text}</span>
                 }
             }, {
@@ -45,6 +45,7 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
         this.getDataList()
     }
     showDetail(data) {
+        //console.log(data);
         location.hash = "/infoDetail"
         NoticeStore.setNotice(data)
     }
@@ -86,8 +87,8 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
                                     <Col span={5}>
                                         <FormItem
                                             label="产品代码"
-                                            labelCol={{ span: 8 }}
-                                            wrapperCol={{ span: 16 }}
+                                            labelCol={{ span: 10 }}
+                                            wrapperCol={{ span: 14 }}
                                         >
                                             {getFieldDecorator('prodCode', {
                                                 rules: [],
@@ -99,8 +100,8 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
                                     <Col span={5}>
                                         <FormItem
                                             label="产品名称"
-                                            labelCol={{ span: 8 }}
-                                            wrapperCol={{ span: 16 }}
+                                            labelCol={{ span: 10 }}
+                                            wrapperCol={{ span: 14 }}
                                         >
                                             {getFieldDecorator('prodName', {
                                                 rules: [],
@@ -112,8 +113,8 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
                                     <Col span={5}>
                                         <FormItem
                                             label="文章标题"
-                                            labelCol={{ span: 8 }}
-                                            wrapperCol={{ span: 16 }}
+                                            labelCol={{ span: 10 }}
+                                            wrapperCol={{ span: 14 }}
                                         >
                                             {getFieldDecorator('articleTitle', {
                                                 rules: [],
@@ -125,13 +126,13 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
                                     <Col span={6}>
                                         <FormItem
                                             label="产品类型"
-                                            labelCol={{ span: 11 }}
-                                            wrapperCol={{ span: 13 }}
+                                            labelCol={{ span: 10 }}
+                                            wrapperCol={{ span: 14 }}
                                         >
                                             {getFieldDecorator('prodType', {
                                                 rules: [],
                                             })(
-                                                <Select style={{ width: 150 }} placeholder="请选择(默认全部)">
+                                                <Select style={{ width: 130 }} placeholder="请选择(默认全部)">
                                                     <Option value="1">全部</Option>
                                                     <Option value="2">私募基金</Option>
                                                     <Option value="3">公募基金</Option>
@@ -159,7 +160,6 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
                                 rowKey="id"
                                 pagination={this.state.pagination}
                             />
-
                         </div>
                     </div>
                 </div>

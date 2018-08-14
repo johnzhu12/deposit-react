@@ -10,12 +10,12 @@ class ObservableNoticeStore {
     }
     //获取加载状态
     @action getNotice() {
-        // console.log('我是get的Notice', Notice)
+        //console.log('我是get的Notice', Notice)
         return this.noticeStore
     }
     //获取加载状态
     @action setNotice(Notice: object) {
-        // console.log('我是set的Notice', Notice)
+        //console.log('我是set的Notice', Notice)
         this.noticeStore = Notice;
     }
 }

@@ -12,7 +12,7 @@ const MenuTag = styled.div`
 div.menu ul
 {
     list-style:none; /* 去掉ul前面的符号 */
-    margin:0 20%; /* 与外界元素的距离为0 */
+    margin:0 15%; /* 与外界元素的距离为0 */
     padding: 0px; /* 与内部元素的距离为0 */
     /* width: auto;   宽度根据元素内容调整 */
 }
@@ -20,9 +20,7 @@ div.menu ul
 div.menu ul li
 {
     font-size:16px;
-    
     float:left; /* 向左漂移，将竖排变为横排 */
-    
 }
 /* 所有class为menu的div中的ul中的a样式(包括尚未点击的和点击过的样式) */
 div.menu ul li a

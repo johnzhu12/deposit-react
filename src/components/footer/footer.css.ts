@@ -4,7 +4,7 @@ const FooterTag = styled.div`
 .footerFrame{
     width:100%;
     height:auto;
-    padding: 0 20%;
+    padding: 0 15%;
     /* background-color:pink; */
     min-width: 1200px;
     .footerContent{
@@ -51,9 +51,10 @@ const FooterTag = styled.div`
             margin-top:60px;
             display:inline-block;
             vertical-align:middle;
+            white-space: nowrap;
             span{
                 height:100%;
-                padding-right:20px;
+                padding-right:10px;
                 font-size:24px;
                 color:rgb(237,126,30);
                 vertical-align:middle;

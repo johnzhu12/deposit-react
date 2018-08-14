@@ -6,7 +6,7 @@ const InfoBodyTag = styled.div`
 .infoFrame{
     width:100%;
     background-color:rgb(234,234,234);
-    padding:20px 20% 40px;
+    padding:20px 15% 40px;
     .infoContent{
         background-color:white;
         padding:30px 30px 15px 30px;
@@ -42,12 +42,26 @@ const InfoBodyTag = styled.div`
     } */
 
     .buttonCustom{
-        background-color:rgb(177,32,33);
+                background-color:rgb(177,32,33);
                 color:white;
                 border:none;
+                margin-left:30px;
     }
     .tableFrame{
-        
+        /* background:greenyellow; */
+        .ant-table-tbody > tr > td{
+            border-bottom:none;
+            :first-child{
+                padding-left:30px;
+            }
+        }
+        .ant-table-thead > tr > th{
+            font-weight:bold; 
+            /* 公告标题显示位置调整 */
+            :first-child{
+            padding-left:200px;
+            }
+        }    
     }
 }
 }
