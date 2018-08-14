@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+
+
 const BodyTag = styled.div`
 .bodyContent{
         width:100%;

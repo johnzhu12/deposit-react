@@ -17,6 +17,11 @@ class Menu extends React.Component<{}, {}>{
         // console.log(this.index);
         // this.className = "active";
         // console.log(this.className);
+        //从导航栏链接过去无问题 从路由过去依然不行
+        var focusOn = document.getElementsByClassName("focusOn")[0].getElementsByTagName("li");
+        focusOn[index].className = "current";
+
+
         switch (index) {
             case 0:
                 location.hash = '/home';
@@ -34,10 +39,16 @@ class Menu extends React.Component<{}, {}>{
                 location.hash = '/voter';
                 break;
         }
+
+
         //写html代码给第几个li赋值background-color: rgb(138,24,25);
         // {{ul: child[index + 1]{
         //     background-color: rgb(138, 24, 25);}}
         // }
+        // var clickMenu = document.getElementById('menu');
+        // var tmp = clickMenu.childNodes.item[index]
+        // tmp.background = 'red';
+        //localStorage.setItem('clickFocus', index)
 
     }
     render() {
@@ -46,7 +57,7 @@ class Menu extends React.Component<{}, {}>{
             <MenuTag>
                 <div className="menuFrame">
                     <div className="menu">
-                        <ul>
+                        <ul className="focusOn">
                             <li><a onClick={this.clickLink.bind(this, 0)}>主页</a></li>
                             <li><a onClick={this.clickLink.bind(this, 1)}>服务介绍</a></li>
                             <li><a onClick={this.clickLink.bind(this, 2)}>信息披露</a></li>

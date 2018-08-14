@@ -45,12 +45,15 @@ div.menu ul li a:hover,div.menu ul li a:active
 }
 /* .active {background-color: red;} */
 /* 所有class为menu的div中的ul中的a样式(鼠标点击元素时的样式) */
-/* div.menu ul li a:active
+/* div.menu ul li a:visited
 {
     background-color: rgb(138,24,25);  /*背景色  */
     /*  color: #cfdbe6;  文字颜色 
     text-decoration: none;  不显示超链接下划线 
-} */
+}  */
+.current{
+    background-color: rgb(138,24,25);
+}
 }
 `
 
