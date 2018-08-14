@@ -16,7 +16,7 @@ div.menu ul
     padding: 0px; /* 与内部元素的距离为0 */
     /* width: auto;   宽度根据元素内容调整 */
 }
-/* 所有class为menu的div中的ul中的li样式 */
+/* 所有class为menu的div中的ul中的li样式 */ 
 div.menu ul li
 {
     font-size:16px;
