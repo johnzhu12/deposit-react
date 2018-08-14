@@ -26,7 +26,7 @@ const HeaderTag = styled.div`
             float: right;
             height: 100%;
             width: 435px;
-            display: inline-block;
+            display: block;
             background: url(${imgurl}) no-repeat;
             background-size: contain;
         }
