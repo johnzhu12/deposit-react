@@ -1,55 +1,55 @@
 import * as React from 'react'
 import MenuTag from './menu.css'
+import { removeObserver } from 'mobx/lib/internal';
 
 
 class Menu extends React.Component<{}, {}>{
     clickLink(this, index) {
-        // var clickMenu = document.getElementById('menu1');
-        // var clickA = clickMenu.getElementsByTagName('a');
-        // for (var i = 0; i < clickA.length; i++) {
-        //     clickA[i].onclick = function () {
-        //         for (var i = 0; i < clickA.length; i++) {
-        //             clickA[i].className = "";
+
+        // console.log(index);
+        // var tmp = index;
+        // var focusOn = document.getElementsByClassName("focusOn")[0].getElementsByTagName("li");
+        // focusOn[tmp].className = "current";
+        // console.log(focusOn);
+        // var oList = document.getElementsByClassName("focusOn")[0].getElementsByTagName('li');
+        // console.log(oList);
+        // var i, j;
+        // var length = oList.length;
+        // for (i = 0; i < length; i++) {
+        //     oList[i].onclick = function () {
+        //         for (j = 0; j < length; j++) {
+        //             oList[j].className = "";
         //         }
-        //         this.className = "active";
+        //         return { this.className += "current"; }
         //     }
         // }
-        // console.log(this.index);
-        // this.className = "active";
-        // console.log(this.className);
-        //从导航栏链接过去无问题 从路由过去依然不行
-        var focusOn = document.getElementsByClassName("focusOn")[0].getElementsByTagName("li");
-        focusOn[index].className = "current";
-
-
         switch (index) {
             case 0:
-                location.hash = '/home';
-                break;
+                {
+                    location.hash = '/home';
+                    break;
+                }
             case 1:
-                location.hash = '/service';
-                break;
+                {
+                    location.hash = '/service';
+                    break;
+                }
             case 2:
-                location.hash = '/info';
-                break;
+                {
+                    location.hash = '/info';
+                    break;
+                }
             case 3:
-                location.hash = '/manger';
-                break;
+                {
+                    location.hash = '/manger';
+                    break;
+                }
             case 4:
-                location.hash = '/voter';
-                break;
+                {
+                    location.hash = '/voter';
+                    break;
+                }
         }
-
-
-        //写html代码给第几个li赋值background-color: rgb(138,24,25);
-        // {{ul: child[index + 1]{
-        //     background-color: rgb(138, 24, 25);}}
-        // }
-        // var clickMenu = document.getElementById('menu');
-        // var tmp = clickMenu.childNodes.item[index]
-        // tmp.background = 'red';
-        //localStorage.setItem('clickFocus', index)
-
     }
     render() {
 

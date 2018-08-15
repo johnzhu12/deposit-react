@@ -11,6 +11,11 @@ class InfoDetail extends React.Component<{}, {}>{
         // let Notice = NoticeStore.getNotice();
         // console.log('我是notice', Notice['title'])
     }
+    handleClose() {
+        // alert(11);
+        // window.close(); 返回查询页面 
+        location.hash = '/info';
+    }
     render() {
         return (
             <DetailTag>
@@ -21,7 +26,7 @@ class InfoDetail extends React.Component<{}, {}>{
                         <MypdfPreView />
                         <div className="detailNoticeDownNew"><span>附件:</span><a>{NoticeStore.getNotice()['title']}</a>
                         </div>
-                        <div className="detailNoticeClose"><Button className="noticeClose">关闭页面</Button></div>
+                        <div className="detailNoticeClose"><Button className="noticeClose" onClick={this.handleClose.bind(this)}>关闭页面</Button></div>
                     </div>
                 </div>
             </DetailTag>
