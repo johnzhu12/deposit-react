@@ -53,10 +53,7 @@ const BodyTag = styled.div`
         .topContentOpen{
             float:right;
         }
-        a.vistied{
-            
-        }
-
+       
     }
     .bodyContentBottom{
         margin-top:20px;
@@ -72,7 +69,6 @@ const BodyTag = styled.div`
         }
         .bottomTitleRight{
             float:right; 
-            /* text-align:right; */
             display:inline-block;
             margin-bottom:10px;
             padding-right:15px;

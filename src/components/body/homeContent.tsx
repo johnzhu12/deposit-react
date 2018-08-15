@@ -16,7 +16,6 @@ interface HomeStates {
 class Body extends React.Component<{}, HomeStates>{
     constructor(props: HomeProps) {
         super(props)
-
         this.state = {
             columns: [{
                 title: '信息披露标题',
@@ -32,11 +31,7 @@ class Body extends React.Component<{}, HomeStates>{
                 key: 'publishTime'
             }],
             dataSource: [],
-            pagination: {
-                //     // pageSize: 50,
-                //     // showQuickJumper: false,
-                //     // showSizeChanger: false
-            }
+            pagination: {}
         }
     }
     componentWillMount() {
@@ -58,7 +53,6 @@ class Body extends React.Component<{}, HomeStates>{
     }
 
     showDetail(data) {
-        //console.log(data);
         location.hash = "/infoDetail";
         NoticeStore.setNotice(data);
     }
