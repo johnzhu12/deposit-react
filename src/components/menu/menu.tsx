@@ -1,22 +1,42 @@
 import * as React from 'react'
 import MenuTag from './menu.css'
 
-
-class Menu extends React.Component<{}, {}>{
+interface MenuState {
+    currentIndex: number
+}
+class Menu extends React.Component<{}, MenuState>{
+    constructor(props: MenuState) {
+        super(props)
+        this.state = {
+            currentIndex: 0  //默认首页
+        }
+    }
+    componentWillMount() {
+        this.checkLink() //检查下当前url
+    }
+    checkLink() {   //刷新依旧保存
+        console.log(location.hash.split('#')[1]);
+        var curHash = location.hash.split('#')[1];
+        switch (curHash) {
+            case '/home':
+                this.setState({ currentIndex: 0 })
+                break;
+            case '/service':
+                this.setState({ currentIndex: 1 })
+                break;
+            case '/info':
+                this.setState({ currentIndex: 2 })
+                break;
+            case '/manger':
+                this.setState({ currentIndex: 3 })
+                break;
+            case '/voter':
+                this.setState({ currentIndex: 4 })
+                break;
+        }
+    }
     clickLink(this, index) {
-        // var clickMenu = document.getElementById('menu1');
-        // var clickA = clickMenu.getElementsByTagName('a');
-        // for (var i = 0; i < clickA.length; i++) {
-        //     clickA[i].onclick = function () {
-        //         for (var i = 0; i < clickA.length; i++) {
-        //             clickA[i].className = "";
-        //         }
-        //         this.className = "active";
-        //     }
-        // }
-        // console.log(this.index);
-        // this.className = "active";
-        // console.log(this.className);
+        this.setState({ currentIndex: index })
         switch (index) {
             case 0:
                 location.hash = '/home';
@@ -35,6 +55,8 @@ class Menu extends React.Component<{}, {}>{
                 break;
         }
     }
+
+
     render() {
 
         return (
@@ -42,11 +64,11 @@ class Menu extends React.Component<{}, {}>{
                 <div className="menuFrame">
                     <div className="menu">
                         <ul>
-                            <li><a onClick={this.clickLink.bind(this, 0)}>主页</a></li>
-                            <li><a onClick={this.clickLink.bind(this, 1)}>服务介绍</a></li>
-                            <li><a onClick={this.clickLink.bind(this, 2)}>信息披露</a></li>
-                            <li><a onClick={this.clickLink.bind(this, 3)}>管理人服务平台</a></li>
-                            <li><a onClick={this.clickLink.bind(this, 4)}>投资者服务平台</a></li>
+                            <li className={this.state.currentIndex == 0 ? 'currentSelect' : 'none'}><a onClick={this.clickLink.bind(this, 0)}>主页</a></li>
+                            <li className={this.state.currentIndex == 1 ? 'currentSelect' : 'none'}><a onClick={this.clickLink.bind(this, 1)}>服务介绍</a></li>
+                            <li className={this.state.currentIndex == 2 ? 'currentSelect' : 'none'}><a onClick={this.clickLink.bind(this, 2)}>信息披露</a></li>
+                            <li className={this.state.currentIndex == 3 ? 'currentSelect' : 'none'}><a onClick={this.clickLink.bind(this, 3)}>管理人服务平台</a></li>
+                            <li className={this.state.currentIndex == 4 ? 'currentSelect' : 'none'}><a onClick={this.clickLink.bind(this, 4)}>投资者服务平台</a></li>
                         </ul>
                     </div>
                 </div>
