@@ -20,15 +20,14 @@ class Body extends React.Component<{}, HomeStates>{
             columns: [{
                 title: '信息披露标题',
                 dataIndex: 'title',
-                key: 'title',
+                key: 'id',
                 render: (text, data, index) => {
-                    //console.log(`我是第${index + 1}行的数据`, JSON.stringify(data))
                     return <span style={{ cursor: 'pointer' }} onClick={this.showDetail.bind(this, data)}>{text}</span>
                 }
             }, {
                 title: '发布时间',
                 dataIndex: 'publishTime',
-                key: 'publishTime'
+                key: 'id'
             }],
             dataSource: [],
             pagination: {}

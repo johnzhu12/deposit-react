@@ -35,10 +35,7 @@ class HomePage extends React.Component<HomeProps, HomeStates>{
             }
         })
     }
-    /*<Button type='primary' onClick={this.requestTest.bind(this)}>
-                    测试接口
-                    {this.state.name}
-                </Button> */
+
     render() {
         return (
             <div>
