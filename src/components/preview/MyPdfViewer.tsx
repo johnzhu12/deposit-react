@@ -34,9 +34,9 @@ class MyPdfViewer extends React.Component<{}, MyPdfViewerStates> {
   // }
 
   componentWillMount() {
-    var notice = NoticeStore.getNotice();
+    let notice = NoticeStore.getNotice();
     console.log('我是notice对象数据', notice)
-    var urlId = notice['id'];
+    let urlId = notice['id'];
     if (urlId) {
       console.log(urlId)
       // const pdfAddress = 'pdfs/' + urlId + '.pdf';
