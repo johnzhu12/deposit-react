@@ -1,6 +1,7 @@
 import React from 'react';
 import PDF from 'react-pdf-js';
 import NoticeStore from '@models/notice'
+import PdfBodyTag from './MyPdfViewer.css'
 
 interface MyPdfViewerStates {
   page: any,
@@ -40,12 +41,12 @@ class MypdfView extends React.Component<{}, MyPdfViewerStates>{
     //   nextButton = <li className="next disabled"><a>Next <i className="fa fa-arrow-right"></i></a></li>;
     // }
     return (
-      <nav>
+      <div>
         <ul className="pager">
           {previousButton}
           {nextButton}
         </ul>
-      </nav>
+      </div>
     );
 
   }
@@ -68,16 +69,53 @@ class MypdfView extends React.Component<{}, MyPdfViewerStates>{
       pagination = this.renderPagination(this.state.page, this.state.pages);
     }
     //console.log('current' + this.state.page);
-    return (
+    let url = this.pdfdir;
+    let onDocumentComplete = this.onDocumentComplete;
+    // let tmp = <PDF
+    //   file={url}
+    //   onDocumentComplete={onDocumentComplete}
+    //   page={1}
+    // />
+    // let tmp1 = <PDF
+    //   file={url}
+    //   onDocumentComplete={onDocumentComplete}
+    //   page={2}
+    // />
 
-      <div>
-        <PDF
-          file={this.pdfdir}
-          onDocumentComplete={this.onDocumentComplete}
-          page={this.state.page}
-        />
-        {pagination}
-      </div>
+    // let temp = <PDF
+    //   file={url}
+    //   onDocumentComplete={onDocumentComplete}
+    //   page={1}
+    // />
+    let pdfContent = <PDF
+      file={url}
+      onDocumentComplete={onDocumentComplete}
+      page={1} />
+
+
+    // let pdfContentTotal;
+    // console.log(this.state.pages);
+    // for (var i = 1; i <= 8; i++) {
+
+    //   // pdfContent += '={ i }';
+    //   // console.log(pdfContent);
+    //   pdfContentTotal += pdfContent;
+    // }
+    // console.log(pdfContentTotal + i);
+
+    // console.log(tmp);
+    return (
+      <PdfBodyTag>
+        <div className="pdfContainer">
+          {/* <PDF
+    file={this.pdfdir}
+    onDocumentComplete={this.onDocumentComplete}
+    page={this.state.page}
+  /> */}
+          {pdfContent}
+          {pagination}
+        </div>
+      </PdfBodyTag>
     )
   }
 }

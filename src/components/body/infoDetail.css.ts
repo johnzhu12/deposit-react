@@ -10,6 +10,28 @@ const DetailTag = styled.div`
 {
         padding:0 30px;
         text-align:center;
+        overflow-y:auto
+        /* background-color:red; */
+}
+.detailNoticeContent div ul li
+{
+    /* width:1263px;
+    height:892px; */
+    display:inline-block;
+    
+}
+.detailNoticeContent div ul li a
+{
+    color:black;
+    text-decoration:underline;
+}
+.detailNoticeContent div ul li:first-child
+{
+    padding-right:30%;
+}
+.detailNoticeContent div ul li:nth-child(2)
+{
+    padding-left:30%;
 }
 .detailNoticeContent span
 {
@@ -18,7 +40,10 @@ const DetailTag = styled.div`
 }
 .detailNoticeContent .detailNoticeDownNew
 {
+    margin-top:15px;
     text-align:left;
+    padding-left:15%;
+    
 }
 .detailNoticeContent .detailNoticeDownNew span
 {
