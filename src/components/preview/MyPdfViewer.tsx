@@ -48,7 +48,14 @@ class MypdfView extends React.Component<{}, MyPdfViewerStates>{
         </ul>
       </div>
     );
-
+  }
+  renderPDF = (page, pages, pdfdir) => {
+    let url = this.pdfdir;
+    let onDocumentComplete = this.onDocumentComplete;
+    return (<PDF
+      file={url}
+      onDocumentComplete={onDocumentComplete}
+      page={1} />)
   }
 
   componentWillMount() {
@@ -65,12 +72,15 @@ class MypdfView extends React.Component<{}, MyPdfViewerStates>{
   }
   render() {
     let pagination = null;
+    let pdfContent2 = null;
     if (this.state.pages) {
       pagination = this.renderPagination(this.state.page, this.state.pages);
+      pdfContent2 = this.renderPDF(this.state.page, this.state.pages, this.pdfdir);
     }
+
+
     //console.log('current' + this.state.page);
-    let url = this.pdfdir;
-    let onDocumentComplete = this.onDocumentComplete;
+
     // let tmp = <PDF
     //   file={url}
     //   onDocumentComplete={onDocumentComplete}
@@ -87,12 +97,26 @@ class MypdfView extends React.Component<{}, MyPdfViewerStates>{
     //   onDocumentComplete={onDocumentComplete}
     //   page={1}
     // />
-    let pdfContent = <PDF
-      file={url}
-      onDocumentComplete={onDocumentComplete}
-      page={1} />
+    // var pdfContent = <PDF
+    //   file={url}
+    //   onDocumentComplete={onDocumentComplete}
+    //   page={1} />
 
+    // var pdfContent2 = pdfContent <PDF
+    //   file={url}
+    //   onDocumentComplete={onDocumentComplete}
+    //   page={2} />
 
+    // var pdfContent2 = `{<PDF
+    //  file={url}
+    //  onDocumentComplete={onDocumentComplete}
+    //  page={1} /><PDF
+    //  file={url}
+    //  onDocumentComplete={onDocumentComplete}
+    //  page={2} />}`;
+    //}
+    // document.getElementsByClassName("pdfContainer").innerHTML=pdfContent2;
+    //     document.getElementsByClassName('pdfContainer').
     // let pdfContentTotal;
     // console.log(this.state.pages);
     // for (var i = 1; i <= 8; i++) {
@@ -112,10 +136,10 @@ class MypdfView extends React.Component<{}, MyPdfViewerStates>{
     onDocumentComplete={this.onDocumentComplete}
     page={this.state.page}
   /> */}
-          {pdfContent}
+          {pdfContent2}
           {pagination}
         </div>
-      </PdfBodyTag>
+      </PdfBodyTag >
     )
   }
 }
