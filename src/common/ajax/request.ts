@@ -26,6 +26,11 @@ let ajaxFunc = observable({
 
         store.setLoadingStatus(true) //loading
         if (ajaxMode == 'mock') {
+            //加载延迟
+            // setTimeout(() => {
+            //     store.setLoadingStatus(false)
+            //     reqMockdata(ops)
+            // }, 0)
             store.setLoadingStatus(false)
             reqMockdata(ops)
         } else {
@@ -34,6 +39,7 @@ let ajaxFunc = observable({
                 data: config.data,
                 url: `${host}${config.url}`
             }).then(response => {
+                store.setLoadingStatus(false)
                 console.log('我是请求结果', response);
                 if (response['code'] == '200') {
                     config.callback(response.data)

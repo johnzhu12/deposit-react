@@ -49,6 +49,4 @@ div.menu ul .currentSelect{
 }
 }
 `
-
-
 export default MenuTag;

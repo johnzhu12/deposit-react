@@ -12,7 +12,6 @@ interface HomeProps {
 }
 interface HomeStates {
     name: string
-
 }
 @observer
 class HomePage extends React.Component<HomeProps, HomeStates>{

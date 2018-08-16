@@ -54,11 +54,13 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
         let params = {}
         params = searchObj ? Object.assign(params, searchObj) : {}
         let that = this;
+
         deposit.ajax({
             url: '/info/noticeData',
             data: params,
             callback(data) {
-                // console.log('我是请求的数据', data)
+                console.log('我是查询到的第一条数据标题', data[0].title)
+                // if(data.title===params.prodName)
                 that.setState({ dataSource: data })
             }
         })
@@ -69,7 +71,8 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
             if (!err) {
                 console.log('Received values of form: ', values);
             }
-            console.log('我是表单的数据:', values)
+            console.log('我是请求的数据标题:', values.prodName)
+
             let searchObj = values;
             this.getDataList(searchObj)
         });

@@ -8,12 +8,9 @@ import { Button } from 'antd'
 @observer
 class InfoDetail extends React.Component<{}, {}>{
     componentWillMount() {
-        // let Notice = NoticeStore.getNotice();
-        // console.log('我是notice', Notice['title'])
+
     }
     handleClose() {
-        // alert(11);
-        // window.close(); 返回查询页面 
         location.hash = '/info';
     }
     render() {

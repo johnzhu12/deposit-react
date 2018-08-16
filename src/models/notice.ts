@@ -6,7 +6,6 @@ import { observable, action } from 'mobx'
 
 class ObservableNoticeStore {
     @observable noticeStore = {
-
     }
     //获取加载状态
     @action getNotice() {
@@ -19,8 +18,6 @@ class ObservableNoticeStore {
         this.noticeStore = Notice;
     }
 }
-
-
 
 const Notice = new ObservableNoticeStore();
 export default Notice
