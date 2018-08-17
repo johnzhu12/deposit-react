@@ -19,7 +19,7 @@ class MypdfView extends React.Component<{}, MyPdfViewerStates>{
   pdfdir: any;
 
   onDocumentComplete = (pages) => {
-    //console.log(pages);
+    console.log(pages);
     this.setState({ page: 1, pages });
   }
 
@@ -53,7 +53,6 @@ class MypdfView extends React.Component<{}, MyPdfViewerStates>{
     );
   }
 
-
   componentWillMount() {
     let notice = NoticeStore.getNotice();
     let urlTitle = notice['id'];//获取文件名字 
@@ -67,41 +66,29 @@ class MypdfView extends React.Component<{}, MyPdfViewerStates>{
     }
   }
   render() {
-    console.log(this.state.pages);
+    //console.log(this.state.pages);
     let pagination = null;
     if (this.state.pages) {
       pagination = this.renderPagination(this.state.page, this.state.pages);
     }
 
-    var tmp = <PDF
-
-      page={1}
-    />;
-
-
-    // for (; this.state.page < this.state.pages; this.setState({ page: this.state.page + 1 })) {
-    //   var tmp = <PDF
-    //     file={this.pdfdir}
-    //     onDocumentComplete={this.onDocumentComplete}
-    //     page={1}
-    //   />;
+    // console.log(this.state.pages);
+    // for (var i = 1; i < this.state.pages; i++) {
+    //   var tmp = `<PDF
+    //     file=${this.pdfdir}
+    //     onDocumentComplete=${this.onDocumentComplete}
+    //     page=${{ i }}/>`
+    //   console.log(tmp);
     // }
-    // console.log(tmp);
 
     return (
       <PdfBodyTag>
         <div className="pdfContainer">
-          {/* <PDF
+          <PDF
             file={this.pdfdir}
             onDocumentComplete={this.onDocumentComplete}
             page={this.state.page}
           />
-          <PDF
-            file={this.pdfdir}
-            onDocumentComplete={this.onDocumentComplete}
-            page={2}
-          />*/}
-          {tmp}
         </div>
         {pagination}
       </PdfBodyTag >
