@@ -10,10 +10,8 @@ class Header extends React.Component<{}, {}>{
             <HeaderTag>
                 <div className="headFrame">
                     <div className="content">
-                        <div className="logo">
-                        </div>
-                        <div className="cornerimg">
-                        </div>
+                        <div className="logo"></div>
+                        <div className="cornerimg"></div>
                     </div>
                 </div>
             </HeaderTag>

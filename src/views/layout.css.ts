@@ -9,6 +9,19 @@ injectGlobal`
 html { 
     overflow-x: hidden; 
 }
+.depositFrame{
+    position:relative;
+}
+div.ant-spin.ant-spin-spinning.ant-spin-show-text
+{
+    position:absolute;
+    top:50%;
+    left:50%;
+    height:50px;
+    weight:50px;
+    margin-left:-25px !important;
+    margin-top:-25px !important;
+}
 `
 
 

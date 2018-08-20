@@ -8,8 +8,10 @@ import { Button } from 'antd'
 @observer
 class InfoDetail extends React.Component<{}, {}>{
     componentWillMount() {
-        // let Notice = NoticeStore.getNotice();
-        // console.log('我是notice', Notice['title'])
+
+    }
+    handleClose() {
+        location.hash = '/info';
     }
     render() {
         return (
@@ -17,11 +19,11 @@ class InfoDetail extends React.Component<{}, {}>{
                 <div className="detailNoticeFrame">
                     <div className="detailNoticeContent">
                         <h1>{NoticeStore.getNotice()['title']}</h1>
-                        <span>{NoticeStore.getNotice()['publishTime']}</span>
+                        <h3>{NoticeStore.getNotice()['publishTime']}</h3>
                         <MypdfPreView />
                         <div className="detailNoticeDownNew"><span>附件:</span><a>{NoticeStore.getNotice()['title']}</a>
                         </div>
-                        <div className="detailNoticeClose"><Button className="noticeClose">关闭页面</Button></div>
+                        <div className="detailNoticeClose"><Button className="noticeClose" onClick={this.handleClose.bind(this)}>关闭页面</Button></div>
                     </div>
                 </div>
             </DetailTag>

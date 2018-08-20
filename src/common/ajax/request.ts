@@ -26,11 +26,13 @@ let ajaxFunc = observable({
 
         store.setLoadingStatus(true) //loading
         if (ajaxMode == 'mock') {
-            setTimeout(() => {
-                store.setLoadingStatus(false)
-                reqMockdata(ops)
-            }, 5000)
-
+            //加载延迟
+            // setTimeout(() => {
+            //     store.setLoadingStatus(false)
+            //     reqMockdata(ops)
+            // }, 0)
+            store.setLoadingStatus(false)
+            reqMockdata(ops)
         } else {
             ajaxInstance({
                 method: config.method,

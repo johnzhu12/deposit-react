@@ -18,7 +18,5 @@ class ObservableMaskStore {
     }
 }
 
-
-
 const mask = new ObservableMaskStore();
 export default mask

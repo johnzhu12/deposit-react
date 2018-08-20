@@ -16,7 +16,7 @@ div.menu ul
     padding: 0px; /* 与内部元素的距离为0 */
     /* width: auto;   宽度根据元素内容调整 */
 }
-/* 所有class为menu的div中的ul中的li样式 */
+/* 所有class为menu的div中的ul中的li样式 */ 
 div.menu ul li
 {
     font-size:16px;
@@ -32,7 +32,6 @@ div.menu ul li a
     /*line-height: 1.35em;  行高 */
     line-height: 37px; /* 行高 */
     padding:4px 20px; /* 内部填充的距离 */
-    
     text-decoration: none; /* 不显示超链接下划线 */
     white-space: nowrap; /* 对于文本内的空白处，不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。 */
 }
@@ -43,22 +42,11 @@ div.menu ul li a:hover,div.menu ul li a:active
     /* color: #465c71;  文字颜色 */
     text-decoration: none; /* 不显示超链接下划线 */
 }
-div.menu ul .currentSelect a
-{
-    background-color: rgb(138,24,25);  /* 背景色 */
-    /* color: #465c71;  文字颜色 */
-    text-decoration: none; /* 不显示超链接下划线 */
+
+div.menu ul .currentSelect{
+    background-color: rgb(138,24,25);
+    text-decoration:none;
 }
-.active {background-color: red;}
-/* 所有class为menu的div中的ul中的a样式(鼠标点击元素时的样式) */
-/* div.menu ul li a:active
-{
-    background-color: rgb(138,24,25);  /*背景色  */
-    /*  color: #cfdbe6;  文字颜色 
-    text-decoration: none;  不显示超链接下划线 
-} */
 }
 `
-
-
 export default MenuTag;
