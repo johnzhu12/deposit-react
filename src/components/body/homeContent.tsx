@@ -37,9 +37,9 @@ class Body extends React.Component<{}, HomeStates>{
         this.getDataList();
     }
     //获取table数据
-    getDataList(searchObj?: object) {
-        let params = {}
-        params = searchObj ? Object.assign(params, searchObj) : {}
+    getDataList() {
+        let params = { pageNum: '1', pageSizeNum: '6' }
+
         let that = this;
         deposit.ajax({
             url: '/info/homeData',

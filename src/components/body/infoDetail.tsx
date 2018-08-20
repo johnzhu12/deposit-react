@@ -25,7 +25,7 @@ class InfoDetail extends React.Component<{}, InfoDetailStates>{
         let params = { fileUrl: '', fileName: '' };
         let that = this;
         deposit.ajax({
-            url: 'downloadDisclosureInfo',   //信息披露附件展示接口
+            url: 'downloadDisclosureInfo',   //信息披露附件展示接口   
             data: params,
             callback(data) {
                 console.log('我是数据流', data) //'BLODJKAJDIAWIJDHDUWEDAWJDOAOJWODOWAJODWAJ'

@@ -4,7 +4,7 @@ import store from '@models/mask'
 import apiConf from '../api/apiConf'
 
 //api相关信息
-const { host, apiList, ajaxMode } = apiConf
+const { devHost, prodHost, apiList, ajaxMode } = apiConf
 
 //ajax通用配置
 let ajaxInstance = axios.create({
@@ -37,7 +37,7 @@ let ajaxFunc = observable({
             ajaxInstance({
                 method: config.method,
                 data: config.data,
-                url: `${host}${config.url}`
+                url: ajaxMode == 'dev' ? `${devHost}${config.url}` : `${prodHost}${config.url}`
             }).then(response => {
                 store.setLoadingStatus(false)
                 console.log('我是请求结果', response);
