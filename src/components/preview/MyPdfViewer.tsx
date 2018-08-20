@@ -3,12 +3,14 @@ import PDF from 'react-pdf-js';
 import NoticeStore from '@models/notice'
 import PdfBodyTag from './MyPdfViewer.css'
 
+interface MyPdfViewerProps {
+  myPdf: any
+}
 interface MyPdfViewerStates {
   page: any,
   pages: any,
 }
-
-class MypdfView extends React.Component<{}, MyPdfViewerStates>{
+class MypdfView extends React.Component<MyPdfViewerProps, MyPdfViewerStates>{
   constructor(props) {
     super(props)
     this.state = {
@@ -85,7 +87,7 @@ class MypdfView extends React.Component<{}, MyPdfViewerStates>{
       <PdfBodyTag>
         <div className="pdfContainer">
           <PDF
-            file={this.pdfdir}
+            file={this.props.myPdf} //后端返回的值
             onDocumentComplete={this.onDocumentComplete}
             page={this.state.page}
           />

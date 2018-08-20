@@ -37,12 +37,18 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
             pagination: {
                 pageSize: 10,
                 showQuickJumper: true,
-                showSizeChanger: true
+                showSizeChanger: true,
+                current: 1,
+                onChange: (pageNum) => {
+                    console.log('我是页码', pageNum);
+                    this.getDataList(pageNum)
+                }
             }
         }
     }
+
     componentWillMount() {
-        this.getDataList()
+        this.getDataList(1)
     }
     showDetail(data) {
         //console.log(data);
@@ -50,13 +56,14 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
         NoticeStore.setNotice(data)
     }
     //获取table数据
-    getDataList(searchObj?: object) {
-        let params = {}
-        params = searchObj ? Object.assign(params, searchObj) : {}
+    getDataList(pageNum, searchObj?: object) {
+        let params = { pageNum: pageNum, pageSizeNum: '10' }
+
+        params = Object.assign(params, searchObj)
         let that = this;
 
         deposit.ajax({
-            url: '/info/noticeData',
+            url: 'getDisclosureInfo',   //信息披露查询接口
             data: params,
             callback(data) {
                 console.log('我是查询到的第一条数据标题', data[0].title)
