@@ -2,7 +2,8 @@ import * as React from 'react'
 import InfoBodyTag from './infoContent.css'
 import { Table, Form, Input, Col, Row, Select, Button } from 'antd';
 import deposit from '@common/index'
-import NoticeStore from '@models/notice'
+import NoticeStore from '@models/notice';
+import Search from '@models/searchParams'
 const imgurl = require('../../static/imgs/icon.png')
 const FormItem = Form.Item;
 const Option = Select.Option;
@@ -16,6 +17,7 @@ interface InfoStates {
     pagination: any
 }
 class InfoBody extends React.Component<InfoProps, InfoStates>{
+    searchParams: any
     constructor(props: InfoProps) {
         super(props)
 
@@ -45,10 +47,15 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
                 }
             }
         }
+
+        this.searchParams = {
+            prodCode: ''
+        }
     }
 
     componentWillMount() {
         this.getDataList(1)
+        this.searchParams = Search.getSearch()
     }
     showDetail(data) {
         //console.log(data);
@@ -62,15 +69,15 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
         params = Object.assign(params, searchObj)
         let that = this;
 
-        deposit.ajax({
-            url: 'getDisclosureInfo',   //信息披露查询接口
-            data: params,
-            callback(data) {
-                console.log('我是查询到的第一条数据标题', data[0].title)
-                // if(data.title===params.prodName)
-                that.setState({ dataSource: data })
-            }
-        })
+        // deposit.ajax({
+        //     url: 'getDisclosureInfo',   //信息披露查询接口
+        //     data: params,
+        //     callback(data) {
+        //         console.log('我是查询到的第一条数据标题', data[0].title)
+        //         // if(data.title===params.prodName)
+        //         that.setState({ dataSource: data })
+        //     }
+        // })
 
     }
     onSearch() {
@@ -79,7 +86,7 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
                 console.log('Received values of form: ', values);
             }
             console.log('我是请求的数据标题:', values.prodName)
-
+            Search.setSearch(values)  //保存search参数
             let searchObj = values;
             this.getDataList(searchObj)
         });
@@ -102,6 +109,7 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
                                         >
                                             {getFieldDecorator('prodCode', {
                                                 rules: [],
+                                                initialValue: this.searchParams.prodCode
                                             })(
                                                 <Input placeholder="请输入" />
                                             )}
@@ -115,6 +123,7 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
                                         >
                                             {getFieldDecorator('prodName', {
                                                 rules: [],
+                                                initialValue: ''
                                             })(
                                                 <Input placeholder="请输入" />
                                             )}
@@ -128,6 +137,7 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
                                         >
                                             {getFieldDecorator('articleTitle', {
                                                 rules: [],
+                                                initialValue: ''
                                             })(
                                                 <Input placeholder="请输入" />
                                             )}
@@ -141,6 +151,7 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
                                         >
                                             {getFieldDecorator('prodType', {
                                                 rules: [],
+                                                initialValue: ''
                                             })(
                                                 <Select style={{ width: 130 }} placeholder="请选择(默认全部)">
                                                     <Option value="1">全部</Option>
