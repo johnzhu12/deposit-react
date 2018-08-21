@@ -20,6 +20,9 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
     searchParams: any
     constructor(props: InfoProps) {
         super(props)
+        this.searchParams = {
+            prodCode: ''
+        }
 
         this.state = {
             columns: [{
@@ -41,18 +44,17 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
                 showQuickJumper: true,
                 showSizeChanger: true,
                 current: 1,
-                onChange: (pageNum) => {
-                    console.log('我是页码', pageNum);
-                    this.getDataList(pageNum)
-                }
+                onChange: this.handleChange
             }
         }
 
-        this.searchParams = {
-            prodCode: ''
-        }
-    }
 
+    }
+    handleChange(pageNum) {
+        console.log('我是页码', pageNum);
+        this.getDataList(pageNum, this.searchParams)
+
+    }
     componentWillMount() {
         this.getDataList(1)
         this.searchParams = Search.getSearch()
@@ -87,8 +89,8 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
             }
             console.log('我是请求的数据标题:', values.prodName)
             Search.setSearch(values)  //保存search参数
-            let searchObj = values;
-            this.getDataList(1, searchObj)
+            this.searchParams = values;
+            this.getDataList(1, this.searchParams)
         });
     }
     render() {
