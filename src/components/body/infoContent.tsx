@@ -88,7 +88,7 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
             console.log('我是请求的数据标题:', values.prodName)
             Search.setSearch(values)  //保存search参数
             let searchObj = values;
-            this.getDataList(searchObj)
+            this.getDataList(1, searchObj)
         });
     }
     render() {
