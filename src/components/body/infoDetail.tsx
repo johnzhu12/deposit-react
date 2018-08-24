@@ -18,7 +18,7 @@ class InfoDetail extends React.Component<{}, InfoDetailStates>{
         }
     }
     componentWillMount() {
-        this.getData()
+        //  this.getData()
     }
 
     getData() {
