@@ -7,14 +7,8 @@ const PdfBodyTag = styled.div`
     height: 500px;
     width: 906px;
     text-align: center;
+   
 }
-.pdfContainer canvas{
-    
-}
-.liDisabled{
-    a{
-        display:none;
-    }
-}
+
 `
 export default PdfBodyTag;
