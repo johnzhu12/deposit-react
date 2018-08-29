@@ -71,15 +71,15 @@ class InfoBody extends React.Component<InfoProps, InfoStates>{
         params = Object.assign(params, searchObj)
         let that = this;
 
-        // deposit.ajax({
-        //     url: 'getDisclosureInfo',   //信息披露查询接口
-        //     data: params,
-        //     callback(data) {
-        //         console.log('我是查询到的第一条数据标题', data[0].title)
-        //         // if(data.title===params.prodName)
-        //         that.setState({ dataSource: data })
-        //     }
-        // })
+        deposit.ajax({
+            url: 'getDisclosureInfo',   //信息披露查询接口
+            data: params,
+            callback(data) {
+                console.log('我是查询到的第一条数据标题', data[0].title)
+                // if(data.title===params.prodName)
+                that.setState({ dataSource: data })
+            }
+        })
 
     }
     onSearch() {
